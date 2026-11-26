@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <title>Vizitka</title>
+</head>
+<body>
+    <h1>Moja vizitka</h1>
+
+    <p><strong>Meno:</strong> {{ meno }}</p>
+    <p><strong>Trieda:</strong> {{ trieda }}</p>
+    <p><strong>Vek:</strong> {{ vek }}</p>
+
+    {% if plnolety %}
+        <p>Som plnoletý.</p>
+    {% else %}
+        <p>Nie som plnoletý.</p>
+    {% endif %}
+
+    <h2>Obľúbené predmety</h2>
+    <ol>
+        {% for predmet in oblubene_predmety %}
+            <li>{{ predmet }}</li>
+        {% endfor %}
+    </ol>
+</body>
+</html>
